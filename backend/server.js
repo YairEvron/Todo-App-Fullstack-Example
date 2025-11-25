@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const CONNECTION_URL = "mongodb+srv://todo_user:abcd1234@mytasksdb.a8hhmhf.mongodb.net/?appName=MyTasksDB"
+const CONNECTION_URL = process.env.MONGO_URI;
 
 const app = express();
 
