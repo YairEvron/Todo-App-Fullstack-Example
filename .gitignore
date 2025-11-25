@@ -1,0 +1,36 @@
+# ==========================================================
+# כללי התעלמות עבור תיקיית ה-BACKEND
+# ==========================================================
+**/node_modules/
+
+# תתעלם מקבצי מערכת הפעלה
+.DS_Store
+Thumbs.db
+
+
+# ==========================================================
+# כללי התעלמות עבור תיקיית ה-FRONTEND
+# ==========================================================
+
+# תלויות (Dependencies) - חובה להתעלם מ-node_modules של הפרונט
+frontend/node_modules
+frontend/.pnp
+frontend/.pnp.js
+
+# בדיקות (Testing)
+frontend/coverage
+
+# סביבת ייצור (Production Build)
+frontend/build
+
+# שונות (Misc) - קבצי סביבה מקומיים (local environment files)
+frontend/.DS_Store
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# קבצי לוגים של מנהלי חבילות
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
