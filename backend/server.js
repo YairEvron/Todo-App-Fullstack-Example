@@ -3,7 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require('dotenv').config();
 
-const CONNECTION_URI = process.env.MONGO_URI;
+
+const PORT = prosses.env.PORT || 4000;
+const CONNECTION_URI = prosses.env.MONGO_URI;
 
 const app = express();
 
@@ -66,4 +68,4 @@ app.delete('/tasks/:id', async (req, res) => {
 })
 
 
-app.listen(4000, () => console.log("Server running on http://localhost:4000"))
+app.listen(PORT, () => console.log("Server running on port " + PORT));
