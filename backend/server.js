@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 require('dotenv').config();
 
 
-const PORT = prosses.env.PORT || 4000;
-const CONNECTION_URI = prosses.env.MONGO_URI;
+const PORT = process.env.PORT || 4000;
+const DATABASE_URI = process.env.MONGO_URI;
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(cors());  // נותן לפורט אחר במחשב לתקשר עם הפ�
 app.use(express.json());  // all request from json to JS object
 
 // connect to MongoDB Atlas
-mongoose.connect(CONNECTION_URI)
+mongoose.connect(DATABASE_URI)
   .then(() => console.log("Connected to MongoDB!"))
   .catch(err => console.error("Could not connect to MongoDB...", err));
 
