@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+require('dotenv').config();
 
-const CONNECTION_URL = process.env.MONGO_URI;
+const CONNECTION_URI = process.env.MONGO_URI;
 
 const app = express();
 
@@ -10,7 +11,7 @@ app.use(cors());  // נותן לפורט אחר במחשב לתקשר עם הפ�
 app.use(express.json());  // all request from json to JS object
 
 // connect to MongoDB Atlas
-mongoose.connect(CONNECTION_URL)
+mongoose.connect(CONNECTION_URI)
   .then(() => console.log("Connected to MongoDB!"))
   .catch(err => console.error("Could not connect to MongoDB...", err));
 
