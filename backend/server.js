@@ -31,9 +31,6 @@ const taskSchema = new mongoose.Schema({
 // Create Task model
 const Task = mongoose.model("Task", taskSchema);
 
-Task.create({ text: 'Start To Learn' })
-Task.create({ text: 'Go to sleep' })
-
 
 // --- Routes ---
 
